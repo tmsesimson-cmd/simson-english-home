@@ -1,3 +1,15 @@
+// ===== 학생 / 선생님 토글 =====
+const roleToggle = document.getElementById("roleToggle");
+if (roleToggle) {
+  roleToggle.querySelectorAll("button").forEach((b) => {
+    b.addEventListener("click", () => {
+      const role = b.dataset.role;
+      document.body.setAttribute("data-role", role);
+      roleToggle.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    });
+  });
+}
+
 // ===== 모바일 메뉴 =====
 const toggle = document.getElementById("navToggle");
 const links = document.getElementById("navLinks");
