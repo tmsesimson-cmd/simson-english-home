@@ -25,7 +25,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='32' y='45' font-size='38' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" as="style" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=7" />
+  <link rel="stylesheet" href="css/style.css?v=8" />
 </head>
 <body>
 
@@ -50,10 +50,10 @@
         <div class="lt" data-mega="m-high">고등부</div>
       </nav>
       <nav class="nav-links" id="navLinks">
-        <a href="#curriculum">커리큘럼</a>
+        <a href="#curriculum">교육과정</a>
         <a href="#features">학습 시스템</a>
+        <a href="#manage">학습관리</a>
         <a href="#about">학원 소개</a>
-        <a href="#report">학습 리포트</a>
         <a href="guide.html">신입생 안내</a>
         <a class="nav-cta" href="https://simlab-a0t6.onrender.com/login" target="_blank" rel="noopener">학습관 로그인</a>
       </nav>
@@ -78,11 +78,11 @@
           <a href="#features"><span class="ic" style="background:#fdeaef;color:var(--voca);">🎙️</span>쉐도잉 말하기</a>
         </div>
         <div class="col">
-          <h4>학원 안내</h4>
+          <h4>학습관리 · 안내</h4>
+          <a href="#manage"><span class="ic" style="background:#e7f7f4;color:var(--sp);">🗂</span>학습관리 시스템</a>
+          <a href="#manage"><span class="ic" style="background:#e8f0ff;color:var(--blue);">📚</span>학습 자료실</a>
           <a href="#about"><span class="ic" style="background:#eef0fe;color:var(--indigo);">👋</span>원장 인사말</a>
-          <a href="guide.html"><span class="ic" style="background:#f3edfd;color:var(--wr);">📋</span>신입생 안내</a>
           <a href="guide.html#campus"><span class="ic" style="background:#fdeaf1;color:#db2777;">🏫</span>캠퍼스 찾기</a>
-          <a href="#contact"><span class="ic" style="background:#fff1ec;color:var(--coral);">💌</span>무료 상담 신청</a>
         </div>
       </div>
     </div>
@@ -160,8 +160,24 @@
     </div>
   </section>
 
+  <!-- 학습관리 시스템 -->
+  <section class="section" id="manage">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">LEARNING CARE</p><h2 class="section-title">한 명도 놓치지 않는 학습관리 시스템</h2>
+        <p class="section-desc">출결부터 과제·재시·포트폴리오·리포트까지 — 심슨은 SIMLAB 학습관으로 자동 관리합니다.</p></div>
+      <div class="mgrid">
+        <div class="mcard"><span class="mic" style="background:#e7f7f4;color:var(--sp);">🗓</span><h3>출결 관리</h3><p>원클릭 출결로 등·하원과 수업 참여를 실시간으로 확인합니다.</p></div>
+        <div class="mcard"><span class="mic" style="background:#fff1e8;color:var(--rc);">📊</span><h3>데일리 테스트 · 재시</h3><p>매일 학습을 점검하고, 기준 미달 시 재시로 반드시 완성합니다.</p></div>
+        <div class="mcard"><span class="mic" style="background:#eef0fe;color:var(--indigo);">📝</span><h3>과제 관리</h3><p>부과·제출·AI 채점·확정까지 한 흐름으로 자동 관리됩니다.</p></div>
+        <div class="mcard"><span class="mic" style="background:#f3edfd;color:var(--wr);">🗂</span><h3>포트폴리오</h3><p>뉴스·에세이·발표·시험 작업물이 성장 기록으로 차곡차곡 쌓입니다.</p></div>
+        <div class="mcard"><span class="mic" style="background:#fdeaef;color:var(--voca);">📈</span><h3>평가 리포트</h3><p>6대 영역 성취도와 성장 추이를 학부모와 함께 공유합니다.</p></div>
+        <div class="mcard"><span class="mic" style="background:#e8f0ff;color:var(--blue);">📚</span><h3>학습 자료실</h3><p>리딩·에세이·단어·내신 자료를 카테고리별로 제공합니다.</p></div>
+      </div>
+    </div>
+  </section>
+
   <!-- 학부별 과정 -->
-  <section class="section" id="courses">
+  <section class="section section-alt" id="courses">
     <div class="container">
       <div class="section-head"><p class="eyebrow">COURSES</p><h2 class="section-title">학년에 꼭 맞는 과정</h2><p class="section-desc">초·중·고 단계별 목표에 맞춰 커리큘럼을 설계합니다.</p></div>
       <div class="band-grid">
@@ -181,7 +197,7 @@
   </section>
 
   <!-- 원장 인사말 -->
-  <section class="section section-alt" id="about">
+  <section class="section" id="about">
     <div class="container about-grid">
       <div class="about-badge">
         <div class="about-mark">S</div>
@@ -198,7 +214,7 @@
   </section>
 
   <!-- 학습 리포트 -->
-  <section class="section" id="report">
+  <section class="section section-alt" id="report">
     <div class="container report-grid">
       <div class="report-text"><p class="eyebrow">REPORT</p><h2 class="section-title">학부모가 받아보는<br />상세 학습 리포트</h2>
         <p>아이의 영어 실력이 어디까지 왔는지, 무엇을 더 해야 하는지 한눈에. 6대 영역 그래프와 성장 추이, 선생님 피드백, 향후 개선 방향까지.</p>
@@ -217,7 +233,7 @@
   </section>
 
   <!-- 변화 -->
-  <section class="section section-alt" id="reviews">
+  <section class="section" id="reviews">
     <div class="container">
       <div class="section-head"><p class="eyebrow">WHY SIMSON</p><h2 class="section-title">심슨에서 만드는 변화</h2><p class="section-desc">수업에서 실제로 다루는 학습 경험입니다.</p></div>
       <div class="rev-grid">
@@ -230,7 +246,7 @@
   </section>
 
   <!-- 상담 + 로그인 -->
-  <section class="section" id="contact">
+  <section class="section section-alt" id="contact">
     <div class="container cta-grid">
       <div class="cta-form-wrap">
         <p class="eyebrow">CONSULTING</p><h2 class="section-title">무료 학습 상담 신청</h2>
@@ -240,6 +256,7 @@
           <p hidden><label>이 칸은 비워두세요: <input name="bot-field" /></label></p>
           <input type="text" name="name" placeholder="학생(또는 학부모) 이름" required />
           <input type="tel" name="phone" placeholder="연락처" required />
+          <select name="type" required><option value="">문의 유형 선택</option><option>무료 상담 · 레벨테스트</option><option>특강 예약</option><option>정규과정 예약</option><option>설명회 신청</option></select>
           <select name="grade" required><option value="">학년 선택</option><option>초등 1~3학년</option><option>초등 4~6학년</option><option>중학생</option><option>고등학생</option></select>
           <textarea name="message" rows="3" placeholder="문의 내용 (선택)"></textarea>
           <button type="submit" class="btn btn-accent btn-lg">상담 신청하기</button>
