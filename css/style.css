@@ -63,6 +63,14 @@ body[data-role="teacher"] .qgrid.role-teacher{display:grid;}
 body[data-role="teacher"] .s-only-student{display:none;}
 body[data-role="teacher"] .s-only-teacher{display:inline;}
 
+/* 접수 안내 스트립 */
+.promo{background:#eef1ff;border-bottom:1px solid #e2e5f5;}
+.promo .in{display:flex;align-items:center;gap:12px;height:46px;font-size:.9rem;color:var(--ink2);}
+.promo .pill{background:var(--brand);color:#fff;font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:6px;flex-shrink:0;}
+.promo .pmsg{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.promo .pmsg b{color:var(--brand);font-weight:800;}
+.promo .plink{margin-left:auto;color:var(--brand);font-weight:800;flex-shrink:0;}
+
 /* 히어로 */
 .hero{background:var(--bg-soft);border-bottom:1px solid var(--line);}
 .hgrid{display:grid;grid-template-columns:1fr 1.95fr 1.08fr;gap:14px;padding:22px 22px 26px;align-items:stretch;}
