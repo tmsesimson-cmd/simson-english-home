@@ -62,6 +62,9 @@ body[data-role="teacher"] .qgrid.role-teacher{display:grid;}
 .s-only-teacher{display:none;}
 body[data-role="teacher"] .s-only-student{display:none;}
 body[data-role="teacher"] .s-only-teacher{display:inline;}
+.lb-role.role-teacher{display:none;}
+body[data-role="teacher"] .lb-role.role-student{display:none;}
+body[data-role="teacher"] .lb-role.role-teacher{display:inline-flex;}
 
 /* 접수 안내 스트립 */
 .promo{background:#eef1ff;border-bottom:1px solid #e2e5f5;}

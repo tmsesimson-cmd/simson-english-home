@@ -25,7 +25,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4fd6'/%3E%3Ctext x='32' y='45' font-size='38' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" as="style" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=11" />
+  <link rel="stylesheet" href="css/style.css?v=12" />
 </head>
 <body>
 
@@ -35,7 +35,7 @@
       <span class="dday">2027 정기시험 <b id="dday">D-—</b></span>
       <a href="#manage">전체 서비스</a>
       <a href="guide.html">신입생 안내</a>
-      <a href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener">로그인</a>
+      <a href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener">로그인</a>
       <a class="tel" href="tel:1855-3321">대표 1855-3321</a>
     </div>
   </div>
@@ -76,16 +76,16 @@
   <section class="hero">
     <div class="container hgrid">
       <div class="today-card">
-        <div class="tc-head"><span>오늘의 학습</span><a href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener">전체보기</a></div>
-        <a class="tc-row" href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener">
+        <div class="tc-head"><span>오늘의 학습</span><a href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener">전체보기</a></div>
+        <a class="tc-row" href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener">
           <span class="tc-ic" style="color:#e11d48;"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="13" r="7.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 10v3.2l2 1.4M5 4 3 6M19 4l2 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
           <span class="tc-t">News 과제 제출</span><span class="tc-b due">오늘 마감</span>
         </a>
-        <a class="tc-row" href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener">
+        <a class="tc-row" href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener">
           <span class="tc-ic" style="color:#2563eb;"><svg viewBox="0 0 24 24" fill="none"><path d="M20 11a8 8 0 1 0-.6 4M20 5v6h-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <span class="tc-t">RC 단어 재시</span><span class="tc-b">D-2</span>
         </a>
-        <a class="tc-row" href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener">
+        <a class="tc-row" href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener">
           <span class="tc-ic" style="color:#0d9488;"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M4 9h16M9 14l2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <span class="tc-t">워크시트</span><span class="tc-b done">3/4 완료</span>
         </a>
@@ -104,12 +104,13 @@
 
       <div class="login-box">
         <div class="lb-head">학습관 로그인</div>
-        <div class="lb-body" data-role="student" id="loginBody">
-          <a class="btn btn-primary" href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener"><span class="s-only-student">학생</span><span class="s-only-teacher">선생님</span> 로그인</a>
+        <div class="lb-body" id="loginBody">
+          <a class="btn btn-primary lb-role role-student" href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener">학생 로그인</a>
+          <a class="btn btn-primary lb-role role-teacher" href="https://simlab-a0t6.onrender.com/staff/login" target="_blank" rel="noopener">선생님 로그인</a>
           <a class="btn btn-light" href="https://simlab-a0t6.onrender.com/login" target="_blank" rel="noopener">회원 · 학년 안내</a>
           <div class="lb-links">
-            <a href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener">아이디 찾기</a>
-            <a href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener">비밀번호 찾기</a>
+            <a href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener">아이디 찾기</a>
+            <a href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener">비밀번호 찾기</a>
           </div>
         </div>
         <a class="lb-call" href="tel:1855-3321">
@@ -124,11 +125,11 @@
   <section class="quick" id="quick">
     <div class="container">
       <div class="qgrid role-student">
-        <a class="qi" href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener"><span class="qc" style="background:#eef0fe;color:var(--brand);"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h9l5 5v11H5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 4v5h5M8 14h6M8 17h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="qt">과제하기</span></a>
-        <a class="qi" href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener"><span class="qc" style="background:#fdeaef;color:var(--voca);"><svg viewBox="0 0 24 24" fill="none"><path d="M20 11a8 8 0 1 0-.6 4M20 5v6h-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="qt">재시</span></a>
-        <a class="qi" href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener"><span class="qc" style="background:#e7f7f4;color:var(--sp);"><svg viewBox="0 0 24 24" fill="none"><path d="M5 20V11M12 20V4M19 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="qt">성적 리포트</span></a>
+        <a class="qi" href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener"><span class="qc" style="background:#eef0fe;color:var(--brand);"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h9l5 5v11H5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 4v5h5M8 14h6M8 17h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="qt">과제하기</span></a>
+        <a class="qi" href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener"><span class="qc" style="background:#fdeaef;color:var(--voca);"><svg viewBox="0 0 24 24" fill="none"><path d="M20 11a8 8 0 1 0-.6 4M20 5v6h-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="qt">재시</span></a>
+        <a class="qi" href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener"><span class="qc" style="background:#e7f7f4;color:var(--sp);"><svg viewBox="0 0 24 24" fill="none"><path d="M5 20V11M12 20V4M19 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="qt">성적 리포트</span></a>
         <a class="qi" href="https://simlab-a0t6.onrender.com/mockexam/exam" target="_blank" rel="noopener"><span class="qc" style="background:#fff1e8;color:var(--rc);"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="qt">모의고사</span></a>
-        <a class="qi" href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener"><span class="qc" style="background:#f3edfd;color:var(--wr);"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="3" width="6" height="11" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="qt">쉐도잉</span></a>
+        <a class="qi" href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener"><span class="qc" style="background:#f3edfd;color:var(--wr);"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="3" width="6" height="11" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="qt">쉐도잉</span></a>
         <a class="qi" href="#manage"><span class="qc" style="background:#e8f0ff;color:var(--blue);"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h5a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H5zM19 4h-5a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span class="qt">자료실</span></a>
       </div>
       <div class="qgrid role-teacher">
@@ -268,7 +269,7 @@
         <h2>이미 학생이신가요?</h2>
         <p>학습관에 로그인해 과제·모의고사·성적 리포트를 확인하세요.</p>
         <div class="login-actions">
-          <a href="https://simlab-a0t6.onrender.com/student/login" target="_blank" rel="noopener" class="btn btn-primary">학생 로그인</a>
+          <a href="https://simlab-a0t6.onrender.com/student/signin" target="_blank" rel="noopener" class="btn btn-primary">학생 로그인</a>
           <a href="https://simlab-a0t6.onrender.com/staff/login" target="_blank" rel="noopener" class="btn btn-light">강사 · 관리자 로그인</a>
         </div>
         <a href="guide.html#campus" class="campus-link">우리 동네 캠퍼스 찾기 (16개 지점)</a>
