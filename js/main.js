@@ -63,6 +63,28 @@ if (hd) {
   window.addEventListener("scroll", onScroll, { passive: true });
 }
 
+// ===== 사이트 콘텐츠(관리팀 편집 문구) 반영 =====
+(function () {
+  fetch("/api/site-content")
+    .then((r) => (r.ok ? r.json() : null))
+    .then((c) => {
+      if (!c) return;
+      const promo = document.querySelector(".promo");
+      if (promo && c.promo_active === "0") { promo.style.display = "none"; }
+      const pill = document.querySelector(".promo .pill");
+      if (pill && c.promo_pill) pill.textContent = c.promo_pill;
+      const pmsg = document.querySelector(".promo .pmsg");
+      if (pmsg && c.promo_text) pmsg.innerHTML = c.promo_text;
+      const plink = document.querySelector(".promo .plink");
+      if (plink && c.promo_link) plink.textContent = c.promo_link;
+      const sub = document.querySelector(".hero-sub");
+      if (sub && c.hero_sub) sub.textContent = c.hero_sub;
+      const ddl = document.getElementById("ddayLabel");
+      if (ddl && c.dday_label) ddl.textContent = c.dday_label;
+    })
+    .catch(() => {});
+})();
+
 // ===== 상담 폼 (Netlify Forms) =====
 const form = document.getElementById("contactForm");
 const status = document.getElementById("formStatus");
