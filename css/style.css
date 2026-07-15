@@ -113,7 +113,7 @@ body[data-role="teacher"] .lb-role.role-teacher{display:inline-flex;}
 .section{padding:70px 0;}
 .section-alt{background:var(--bg-soft);}
 .section-head{text-align:center;max-width:620px;margin:0 auto 40px;}
-.eyebrow{font-size:.76rem;font-weight:900;color:var(--brand);letter-spacing:.12em;margin-bottom:10px;}
+.eyebrow{font-size:.76rem;font-weight:900;color:var(--accent-d);letter-spacing:.12em;margin-bottom:10px;}
 .section-title{font-size:1.9rem;font-weight:900;line-height:1.32;}
 .section-desc{margin-top:12px;color:var(--muted);font-size:1rem;}
 
@@ -121,7 +121,7 @@ body[data-role="teacher"] .lb-role.role-teacher{display:inline-flex;}
 .flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
 .flow-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--sh-sm);position:relative;transition:.15s;}
 .flow-card:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:#d7dcf0;}
-.flow-card .fs{font-size:.74rem;font-weight:900;color:var(--brand);letter-spacing:.05em;}
+.flow-card .fs{font-size:.74rem;font-weight:900;color:var(--accent-d);letter-spacing:.05em;}
 .flow-card h3{font-size:1.12rem;font-weight:900;margin:8px 0 7px;}
 .flow-card p{color:var(--muted);font-size:.9rem;line-height:1.55;}
 
