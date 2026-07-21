@@ -94,10 +94,13 @@ if (form) {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     if (btn) { btn.disabled = true; btn.textContent = "보내는 중…"; }
-    const data = new URLSearchParams(new FormData(form));
-    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: data.toString() })
-      .then((r) => { if (!r.ok) throw new Error(); showStatus("✅ 상담 신청이 접수되었습니다! 확인 후 빠르게 연락드리겠습니다.", true); form.reset(); })
-      .catch(() => { showStatus("✅ 신청 완료! (로컬 미리보기에서는 실제 전송은 배포 후 동작합니다.)", true); form.reset(); })
+    fetch("/api/consult", { method: "POST", body: new FormData(form) })
+      .then((r) => r.json())
+      .then((d) => {
+        if (d && d.ok) { showStatus("상담 신청이 접수되었습니다. 확인 후 빠르게 연락드리겠습니다.", true); form.reset(); }
+        else { showStatus((d && d.error) || "잠시 후 다시 시도해 주세요.", false); }
+      })
+      .catch(() => { showStatus("전송에 실패했어요. 대표번호 1855-3321로 연락 주세요.", false); })
       .finally(() => { if (btn) { btn.disabled = false; btn.textContent = "상담 신청하기"; } });
   });
 }
