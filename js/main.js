@@ -85,7 +85,40 @@ if (hd) {
     .catch(() => {});
 })();
 
-// ===== 상담 폼 (Netlify Forms) =====
+// ===== 강사진 (관리자가 등록한 선생님만 노출) =====
+(function () {
+  const sec = document.getElementById("teachers");
+  const grid = document.getElementById("teacherGrid");
+  if (!sec || !grid) return;
+  const COLOR = { LC: "#4f46e5", RC: "#ea580c", SP: "#0d9488", WR: "#7c3aed",
+                  GR: "#2563eb", VOCA: "#e11d48", NEWS: "#0ea5a4", DEBATE: "#7c3aed" };
+  const LABEL = { LC: "듣기", RC: "독해", SP: "말하기", WR: "쓰기",
+                  GR: "문법", VOCA: "어휘", NEWS: "뉴스·애니", DEBATE: "토론" };
+  const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  fetch("/api/teachers")
+    .then((r) => (r.ok ? r.json() : []))
+    .then((list) => {
+      if (!Array.isArray(list) || !list.length) return;   // 없으면 섹션째 숨김 유지
+      grid.innerHTML = list.map((t) => {
+        const c = COLOR[t.subject] || "#3b4fd6";
+        const lb = LABEL[t.subject] || t.subject || "";
+        const initial = (t.name || "?").trim().charAt(0);
+        return (
+          '<article class="teacher-card">' +
+            '<span class="tc-av" style="background:' + c + ';">' + esc(initial) + "</span>" +
+            '<p class="tc-name">' + esc(t.name) + "</p>" +
+            (lb ? '<p class="tc-subj" style="color:' + c + ';">' + esc(lb) + "</p>" : "") +
+            (t.intro ? '<p class="tc-intro">' + esc(t.intro) + "</p>" : "") +
+          "</article>"
+        );
+      }).join("");
+      sec.hidden = false;
+    })
+    .catch(() => {});
+})();
+
+// ===== 상담 폼 =====
 const form = document.getElementById("contactForm");
 const status = document.getElementById("formStatus");
 function showStatus(msg, ok) { if (!status) return; status.hidden = false; status.textContent = msg; status.style.color = ok ? "#16a34a" : "#dc2626"; }

@@ -25,7 +25,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4fd6'/%3E%3Ctext x='32' y='45' font-size='38' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" as="style" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=14" />
+  <link rel="stylesheet" href="css/style.css?v=15" />
   <!-- 검색결과에 학원 정보(이름·전화·과목)가 바로 표시되도록 -->
   <script type="application/ld+json">
   {
@@ -77,7 +77,7 @@
         <a href="#quick">학습하기</a>
         <a href="#manage">학습관리</a>
         <a href="#report">성적 리포트</a>
-        <a href="#curriculum">교육과정</a>
+        <a href="#curriculum">교육과정</a><a href="#teachers">선생님</a>
         <a href="#about">학원 소개</a>
         <a class="nav-cta" href="https://simlab-a0t6.onrender.com/login" target="_blank" rel="noopener">학습관 입장</a>
       </nav>
@@ -253,6 +253,15 @@
     </div>
   </section>
 
+  <!-- 강사진 — 등록된 선생님이 있을 때만 나타남 (관리자: /admin/teachers) -->
+  <section class="section" id="teachers" hidden>
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">OUR TEACHERS</p><h2 class="section-title">아이를 맡아 가르치는 선생님</h2>
+        <p class="section-desc">담당 과목과 수업 방향을 미리 확인하세요.</p></div>
+      <div class="teacher-grid" id="teacherGrid"></div>
+    </div>
+  </section>
+
   <!-- 상담 + 로그인 -->
   <section class="section section-alt" id="contact">
     <div class="container cta-grid">
@@ -301,6 +310,6 @@
     <p class="copyright">© 2026 SIMSON (생각하는 영어 · News &amp; Debate 심슨어학원). All rights reserved.</p>
   </footer>
 
-  <script src="js/main.js?v=8"></script>
+  <script src="js/main.js?v=9"></script>
 </body>
 </html>

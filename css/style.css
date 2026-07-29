@@ -252,3 +252,19 @@ body[data-role="teacher"] .lb-role.role-teacher{display:inline-flex;}
   .util a:not(.tel){display:none;}
   .hero-main h1{font-size:1.95rem;}
 }
+
+/* ── 강사진 ─────────────────────────────────────────── */
+.teacher-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;margin-top:34px;}
+.teacher-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 18px;text-align:center;
+  box-shadow:var(--sh);transition:transform .18s ease,box-shadow .18s ease;}
+.teacher-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(20,24,50,.10);}
+.tc-av{width:60px;height:60px;border-radius:18px;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 14px;color:#fff;font-weight:900;font-size:24px;letter-spacing:-.02em;}
+.tc-name{font-size:1.02rem;font-weight:900;color:var(--ink);}
+.tc-subj{font-size:.76rem;font-weight:900;letter-spacing:.04em;margin-top:5px;}
+.tc-intro{font-size:.86rem;color:var(--muted);margin-top:10px;line-height:1.6;word-break:keep-all;}
+@media (max-width:760px){
+  .teacher-grid{grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px;}
+  .teacher-card{padding:20px 12px;}
+  .tc-av{width:52px;height:52px;font-size:21px;border-radius:16px;}
+}
