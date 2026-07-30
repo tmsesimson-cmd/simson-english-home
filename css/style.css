@@ -268,3 +268,26 @@ body[data-role="teacher"] .lb-role.role-teacher{display:inline-flex;}
   .teacher-card{padding:20px 12px;}
   .tc-av{width:52px;height:52px;font-size:21px;border-radius:16px;}
 }
+
+/* ── 모바일 터치 영역 ────────────────────────────────
+   손가락으로 누르는 화면에서는 링크가 보이는 것만으로 부족하다.
+   실측(375px)에서 44px에 못 미치던 것들만 넓힌다. 데스크톱은 그대로. */
+@media (max-width:760px){
+  /* 햄버거 — 모바일에서 가장 중요한 버튼인데 38x32였다 */
+  .nav-toggle{padding:12px 10px;min-width:44px;min-height:44px;align-items:center;justify-content:center;}
+
+  /* 전화 · 상단 띠 링크 */
+  .util .tel{padding:9px 13px;}
+  .promo .plink{padding:10px 4px;}
+
+  /* 로그인 카드 아래 보조 링크 (19px였다) */
+  .lb-links a{display:inline-block;padding:11px 10px;}
+
+  /* 푸터 내비 · 캠퍼스 찾기 · 대표번호 (19~23px였다) */
+  .footer-nav a{display:inline-block;padding:11px 2px;}
+  .footer-tel a{display:inline-block;padding:8px 0;}
+  .campus-link{padding:12px 0;}
+
+  /* 읽기 힘들 만큼 작던 글자 */
+  .brand small,.brand .tag{font-size:.72rem;}
+}
